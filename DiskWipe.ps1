@@ -152,8 +152,8 @@ Function copy-Files-To-Ram-Drive() {
         Write-Host "RAM Drive missing jwipe files. Copying files necessary to be able to remove USB..." -ForegroundColor Green
         $JUNK | Out-File .\_._
         Copy-Item -Path .\_._ -Destination "$($SYSTEM_DRIVE)\_._"
-        Copy-Item -Path .\jwipe.bat -Destination "$($SYSTEM_DRIVE)\jwipe.bat"
-        Copy-Item -Path .\jwipe.ps1 -Destination "$($SYSTEM_DRIVE)\jwipe.ps1"
+        Copy-Item -Path .\DiskWipe.bat -Destination "$($SYSTEM_DRIVE)\DisWipe.bat"
+        Copy-Item -Path .\DiskWipe.ps1 -Destination "$($SYSTEM_DRIVE)\DiskWipe.ps1"
     }
     else {
         return #Files already exist, do exit function
